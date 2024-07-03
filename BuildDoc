@@ -1,0 +1,11 @@
+MAIN="src/main.py"
+PYFLAGS="-B"
+OUTPATH="bin"
+EXEC="xhcx"
+PYINSTALLFLAGS="--onefile --distpath=$OUTPATH --name=$EXEC"
+
+[compile]
+pyinstaller $PYINSTALLFLAGS $MAIN
+
+[test]
+python3 $PYFLAGS $MAIN
